@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>VIP ACCESS | DELTIN ROYALE</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --gold: #ffcc00;
+            --gold-gradient: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body, html {
+            width: 100%;
+            height: 100%;
+            background-color: #050505;
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            overflow: hidden;
+            position: fixed;
+        }
+
+        /* --- BLURRY AURA ANIMATION --- */
+        .background-wrapper {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: -1;
+            filter: blur(80px);
+            opacity: 0.6;
+        }
+
+        .blob {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: #b38728;
+            border-radius: 50%;
+            animation: move 20s infinite alternate;
+        }
+
+        .blob-1 { top: -10%; left: -10%; background: #aa771c; }
+        .blob-2 { bottom: -10%; right: -10%; background: #bf953f; animation-duration: 25s; }
+        .blob-3 { top: 40%; left: 30%; width: 200px; height: 200px; background: #fcf6ba; animation-duration: 15s; }
+
+        @keyframes move {
+            from { transform: translate(0, 0) scale(1); }
+            to { transform: translate(100px, 100px) scale(1.2); }
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .logo-wrapper {
+            margin-bottom: 15px;
+        }
+
+        .logo {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            padding: 3px;
+            background: var(--gold-gradient);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            animation: float 4s ease-in-out infinite;
+            margin: 0 auto;
+        }
+
+        .logo img {
+            width: 100%; height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #000;
+            display: block;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.7rem, 8vw, 2.8rem);
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+        }
+
+        .team-tag {
+            font-size: 0.8rem;
+            letter-spacing: 4px;
+            color: #fff;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            font-weight: 600;
+            opacity: 0.8;
+        }
+
+        .glass-panel {
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 24px;
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 35px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .glass-panel p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #efefef;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 15px;
+        }
+
+        .stat-item b { color: var(--gold); font-size: 1.2rem; }
+        .stat-item p { font-size: 0.65rem; text-transform: uppercase; opacity: 0.6; }
+
+        .btn-telegram {
+            width: 100%;
+            max-width: 320px;
+            padding: 20px;
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: #000;
+            background: var(--gold-gradient);
+            text-decoration: none;
+            border-radius: 50px;
+            text-transform: uppercase;
+            display: block;
+            box-shadow: 0 15px 35px rgba(179, 135, 40, 0.4);
+            animation: zoomPulse 2s infinite ease-in-out;
+        }
+
+        @keyframes zoomPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.07); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* --- UPDATED FOOTER SECTION --- */
+        .footer {
+            margin-top: 25px;
+            font-size: 0.7rem;
+            opacity: 0.7;
+            letter-spacing: 1px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .footer span {
+            opacity: 0.5;
+            letter-spacing: 2px;
+        }
+
+        .agency-link {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid transparent;
+            transition: 0.3s;
+        }
+
+        .agency-link:hover {
+            border-bottom: 1px solid var(--gold);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background-wrapper">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="container">
+        <div class="logo-wrapper">
+            <div class="logo">
+                <img src="https://onebyone.site/wp-content/uploads/2026/03/delltin.jpg" alt="Casino VIP">
+            </div>
+        </div>
+
+        <h1>DELTIN ROYALE</h1>
+        <div class="team-tag">Elite Betting mastery</div>
+
+        <div class="glass-panel">
+            <p>Master the table and crush the odds. Join us for <b>real-time predictive hacks</b> and exclusive winning strategies.</p>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <b>12.4k+</b>
+                    <p>Winners</p>
+                </div>
+                <div class="stat-item">
+                    <b>98.2%</b>
+                    <p>Hit Rate</p>
+                </div>
+                <div class="stat-item">
+                    <b>LIVE</b>
+                    <p>Hacks</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="https://t.me/+RAhQpc2hEv5iZDg1" class="btn-telegram">
+            JOIN THE WINNING STREAK
+        </a>
+
+        <div class="footer">
+            <span>✦ 18+ | PLAY RESPONSIBLY ✦</span>
+            <p>Ads managed by 
+                <a href="https://telegram.me/+TRlJl628l-FkMWE9" class="agency-link">NEXGROWW AGENCY</a>
+            </p>
+        </div>
+    </div>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2334263653708575');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2334263653708575&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</body>
+</html>
